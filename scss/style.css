@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,7 +292,9 @@ html {
 }
 
 .container:hover {
-  -webkit-box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px, #97999c -20px 20px, #c7c7c7 -25px 25px;
-          box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px, #97999c -20px 20px, #c7c7c7 -25px 25px;
+  -webkit-box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px,
+ #97999c -20px 20px, #c7c7c7 -25px 25px;
+          box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px,
+ #97999c -20px 20px, #c7c7c7 -25px 25px;
 }
 /*# sourceMappingURL=style.css.map */
