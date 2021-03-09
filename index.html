@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <!-- ! linking css -->
+    <link rel="stylesheet" href="./scss/style.css" />
+
+    <!-- todo this is an icon -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+ 
+    <!-- todo fonts google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+
+</head>
+  <body>
+   <div class="container">
+    <header>
+       
+        <nav>
+          <div class="nav-list"><span><i class="uil uil-angle-down"></i> </span></div>
+          <div class="nav-list"><span>Now Playing</span></div>
+          <div class="nav-list"><span><i class="uil uil-list-ui-alt"></i></span></div>
+        </nav>
+        
+       
+            <img src="./image/imagine.jpg" alt="">
+      
+      </header>
+      <div class="music-titles">
+        <div class="titles-components">
+           <div class="upper-component">
+            <div class="components-list icon"><span><i class="uil uil-heart-alt"></i></span></div>
+            <div class="components-list"><span>Bad Liar</span></div>
+            <div class="components-list icon"><span><i class="uil uil-ellipsis-h"></i></span></div>
+           </div>
+        </div>
+        <div class="lower-component">
+            <span>imagine dragons</span>
+        </div>
+    </div>
+   
+    <div class="progress-bar">
+      <div class="progress-wave"></div>
+      
+        <!-- <div class="progress-div" id="progress-div">
+          
+            <div class="progress"></div>
+        </div> -->
+        <div class="progress-duration_meter">
+            <div id="current-time" >0:00</div>
+            <div id="duration-time" >3:40</div>
+        </div>
+        
+    </div>
+
+    <div class="music-controlls">
+      <div class="mc-lists shuffle"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -3 24 24" width="20" height="20" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M19.548 4.837L16.875 7.51a1 1 0 0 1-1.415-1.414L16.556 5H15.1a5.22 5.22 0 0 0-5.089 4.058A5.264 5.264 0 0 0 15.105 13h1.502l-1.147-1.147a1 1 0 0 1 1.415-1.414l2.828 2.828a.996.996 0 0 1 .282.562 1.006 1.006 0 0 1-.437 1.008l-2.673 2.673a1 1 0 0 1-1.415-1.414L16.556 15h-1.451a7.264 7.264 0 0 1-6.114-3.34A7.22 7.22 0 0 1 2.901 15H1a1 1 0 0 1 0-2h1.901a5.22 5.22 0 0 0 5.06-3.936A5.263 5.263 0 0 0 2.836 5H1a1 1 0 1 1 0-2h1.836a7.264 7.264 0 0 1 6.143 3.387A7.22 7.22 0 0 1 15.1 3h1.508L15.46 1.853A1 1 0 1 1 16.875.439l2.828 2.828a.996.996 0 0 1 .282.562 1.006 1.006 0 0 1-.437 1.008z"></path></svg></span></div>
+      <div class="mc-lists playControll">
+        <div class="mcl-lists back"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -3 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M6.18 8.477a.976.976 0 0 0 .324 1.363l9.922 6.032c.16.097.346.149.535.149.56 0 1.013-.443 1.013-.99V2.97a.973.973 0 0 0-.153-.523 1.027 1.027 0 0 0-1.395-.317L6.504 8.16c-.131.08-.243.189-.325.317zM6 6.136L15.355.449c1.425-.867 3.3-.44 4.186.951.3.471.459 1.014.459 1.569V15.03C20 16.671 18.64 18 16.96 18a3.093 3.093 0 0 1-1.605-.448L6 11.865V16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4.136zM2 2v14h2V2H2z"></path></svg></span></div>
+        <div class="mcl-lists play" onclick="togglePlay()"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -3 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.031 1.031 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.746 1.997l-9.921 6.031c-1.425.867-3.3.44-4.186-.951A2.918 2.918 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448l9.921 6.032c1.425.866 1.862 2.696.975 4.088-.246.386-.58.712-.975.952z"></path></svg></span></div>
+        <div class="mcl-lists next"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -3 24 24" width="24" height="24" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M13.82 9.523a.976.976 0 0 0-.324-1.363L3.574 2.128a1.031 1.031 0 0 0-.535-.149c-.56 0-1.013.443-1.013.99V15.03c0 .185.053.366.153.523.296.464.92.606 1.395.317l9.922-6.031c.131-.08.243-.189.325-.317zm.18 2.341l-9.355 5.687c-1.425.867-3.3.44-4.186-.951A2.918 2.918 0 0 1 0 15.03V2.97C0 1.329 1.36 0 3.04 0c.567 0 1.123.155 1.605.448L14 6.135V2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4.136zM16 2v14h2V2h-2z"></path></svg></span></div>
+      </div>
+      <div class="mc-lists repeat"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -3 24 24" width="20" height="20" preserveAspectRatio="xMinYMin" class="icon__icon"><path d="M11.774 15l1.176 1.176a1 1 0 0 1-1.414 1.414l-2.829-2.828a1 1 0 0 1 0-1.414l2.829-2.829a1 1 0 0 1 1.414 1.415L11.883 13H14a4 4 0 1 0 0-8 1 1 0 0 1 0-2 6 6 0 1 1 0 12h-2.226zM8.273 3L7.176 1.904A1 1 0 0 1 8.591.489l2.828 2.829a1 1 0 0 1 0 1.414L8.591 7.56a1 1 0 0 1-1.415-1.414L8.323 5H6a4 4 0 1 0 0 8 1 1 0 0 1 0 2A6 6 0 1 1 6 3h2.273z"></path></svg></span></div>
+    </div>
+      
+   </div>
+   <script src="https://unpkg.com/wavesurfer.js"></script>
+   <script>
+    
+     var wavesurfer = WaveSurfer.create({
+    container: '.progress-wave',
+    barHeight:0.8,
+    height:50,
+    cursorColor:'#ffffff',
+    progressColor:'#F9F9FA',
+    waveColor:'#495061',
+    responsive:true,
+    
+    
+  });
+  wavesurfer.load('/music-audios/badliar.mp3');
+  wavesurfer.on('ready', function () {
+
+   
+   
+});
+
+let count=0;
+function togglePlay() {
+
+  if(count==0){
+    count=1;
+    wavesurfer.play();
+  }else{
+    count=0;
+    wavesurfer.pause();
+  }
+  
+}
+   </script>
+  </body>
+</html>
