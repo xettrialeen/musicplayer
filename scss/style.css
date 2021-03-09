@@ -1,0 +1,292 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header nav {
+  padding: 10px;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Heebo", sans-serif;
+}
+
+header nav .nav-list {
+  color: #F9F9FA;
+  margin-top: 10px;
+}
+
+header nav .nav-list:nth-child(1) {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+header nav .nav-list:nth-child(3) {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+header img {
+  width: 190px;
+  height: 190px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: auto;
+  display: block;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px 12px, rgba(0, 0, 0, 0.3) 0px 18px 36px 10px;
+          box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px 12px, rgba(0, 0, 0, 0.3) 0px 18px 36px 10px;
+}
+
+.music-titles {
+  margin-top: 15px;
+}
+
+.music-titles .titles-components {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px 20px 0px 20px;
+}
+
+.music-titles .titles-components .upper-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.music-titles .titles-components .upper-component .components-list {
+  font-family: "Heebo", sans-serif;
+  font-size: 22px;
+  color: #F9F9FA;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.music-titles .titles-components .upper-component .icon {
+  font-size: 21px;
+  color: #495061;
+  cursor: pointer;
+  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+}
+
+.music-titles .titles-components .upper-component .icon:hover {
+  color: #F9F9FA;
+}
+
+.music-titles .lower-component {
+  color: #495061;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+.progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 20px 20px 20px;
+}
+
+.progress-bar .progress-wave {
+  cursor: pointer;
+}
+
+.progress-bar .progress-div {
+  position: relative;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  background-color: #495061;
+  cursor: pointer;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+}
+
+.progress-bar .progress-div .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #F9F9FA;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+}
+
+.progress-bar .progress-duration_meter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.progress-bar .progress-duration_meter #current-time {
+  color: #F9F9FA;
+}
+
+.progress-bar .progress-duration_meter #duration-time {
+  color: #495061;
+}
+
+.music-controlls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+}
+
+.music-controlls .shuffle,
+.music-controlls .repeat {
+  fill: #495061;
+  transition: fill 0.5s ease;
+  -webkit-transition: fill 0.5s ease;
+  -moz-transition: fill 0.5s ease;
+  -ms-transition: fill 0.5s ease;
+  -o-transition: fill 0.5s ease;
+}
+
+.music-controlls .shuffle:hover,
+.music-controlls .repeat:hover {
+  fill: #F9F9FA;
+}
+
+.music-controlls .playControll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  fill: #F9F9FA;
+}
+
+.music-controlls .playControll .play {
+  margin-top: -15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  position: relative;
+  background-color: #F9F9FA;
+}
+
+.music-controlls .playControll .play span {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  fill: #495061;
+}
+
+html {
+  background-color: #E0E4EC;
+}
+
+.container {
+  width: 305px;
+  height: 85vh;
+  background-color: #171C26;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
+  -webkit-box-shadow: #171c25 0px 5px, #414752 0px 10px, #73777e 0px 15px,#97999c 0px 20px, #c7c7c7  0px 25px;
+          box-shadow: #171c25 0px 5px, #414752 0px 10px, #73777e 0px 15px,#97999c 0px 20px, #c7c7c7  0px 25px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.container:hover {
+  -webkit-box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px, #97999c -20px 20px, #c7c7c7 -25px 25px;
+          box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px, #97999c -20px 20px, #c7c7c7 -25px 25px;
+}
+/*# sourceMappingURL=style.css.map */

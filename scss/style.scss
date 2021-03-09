@@ -1,0 +1,35 @@
+@import "header";
+@import "footer";
+@import "content";
+@import "./vairables/variables";
+@import "./vairables/functions";
+
+//*** all the files has been imported
+// todo now lets work in the background
+html {
+  background-color: $background-color;
+}
+.container {
+  width: 305px;
+  height: 85vh;
+  background-color: $primary-color;
+  
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  transition: box-shadow 0.5s ease-in-out;
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  -moz-transition: box-shadow 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out;
+  -o-transition: box-shadow 0.5s ease-in-out;
+  box-shadow: #171c25 0px 5px, #414752 0px 10px, #73777e 0px 15px,#97999c 0px 20px, #c7c7c7  0px 25px;
+  &:hover 
+{
+    box-shadow: #171c25 -5px 5px, #414752 -10px 10px, #73777e -15px 15px,
+      #97999c -20px 20px, #c7c7c7 -25px 25px;
+  }
+
+  @include makeCenter();
+}

@@ -1,0 +1,151 @@
+@import "./vairables/variables";
+@import "./vairables/functions";
+
+.music-titles {
+  margin-top: 15px;
+
+  .titles-components {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 0px 20px;
+
+    .upper-component {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .components-list {
+        font-family: $bold-fonts;
+        font-size: 22px;
+        color: $fontColor-active;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+
+      .icon {
+        font-size: 21px;
+        color: $fontColor-inactive;
+        cursor: pointer;
+        transition: color 0.5s ease;
+
+        -webkit-transition: color 0.5s ease;
+        -moz-transition: color 0.5s ease;
+        -ms-transition: color 0.5s ease;
+        -o-transition: color 0.5s ease;
+        &:hover {
+          color: $fontColor-active;
+        }
+      }
+    }
+  }
+  .lower-component {
+    color: $fontColor-inactive;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+  }
+}
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 20px 20px 20px;
+  .progress-wave {
+    cursor: pointer;
+  }
+
+  .progress-div {
+    position: relative;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 4rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+    background-color: $fontColor-inactive;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: all 1s linear;
+
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    -o-transition: all 1s linear;
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30%;
+      height: 100%;
+      background-color: $fontColor-active;
+      border-radius: 4rem;
+      -webkit-border-radius: 4rem;
+      -moz-border-radius: 4rem;
+      -ms-border-radius: 4rem;
+      -o-border-radius: 4rem;
+    }
+  }
+  .progress-duration_meter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-family: sans-serif;
+    font-size: 14px;
+
+    #current-time {
+      color: $fontColor-active;
+    }
+    #duration-time {
+      color: $fontColor-inactive;
+    }
+  }
+}
+.music-controlls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+  cursor: pointer;
+
+  .shuffle,
+  .repeat {
+    fill: $fontColor-inactive;
+    transition: fill 0.5s ease;
+
+    -webkit-transition: fill 0.5s ease;
+    -moz-transition: fill 0.5s ease;
+    -ms-transition: fill 0.5s ease;
+    -o-transition: fill 0.5s ease;
+    &:hover {
+      fill: $fontColor-active;
+    }
+  }
+  .playControll {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    fill: $fontColor-active;
+    .play {
+      margin-top: -15px;
+      width: 50px;
+      height: 50px;
+      
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      -ms-border-radius: 50px;
+      -o-border-radius: 50px;
+      position: relative;
+      background-color: $fontColor-active;
+          
+      span{
+      @include makeCenter();
+      fill: $fontColor-inactive;
+      }
+}
+  }
+}
